@@ -1,0 +1,31 @@
+$sizes: "default", "large", "x-large";
+$size-height: (
+  "default": 30px,
+  "large": 35px,
+  "x-large": 44px
+);
+$size-font: (
+  "default": 14px,
+  "large": 15px,
+  "x-large": 17px
+);
+$size-padding: (
+  "default": 7px,
+  "large": 8px,
+  "x-large": 11px
+);
+
+
+@mixin size($class) {
+  @each $size in $sizes {
+    &.#{$size} {
+      height: map-get($size-height, $size);
+      & .#{$class}__content{
+        font-size: map-get($size-font, $size);
+        font-weight: 500;
+        line-height: map-get($size-font, $size);
+        padding: map-get($size-padding, $size) 0;
+      }
+    }
+  }
+}

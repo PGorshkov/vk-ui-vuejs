@@ -1,0 +1,55 @@
+@import "colors";
+@import "sizes";
+
+.vk-button{
+  border-radius: 10px;
+  padding: 0 16px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  &:active{
+    opacity: .6;
+  }
+  &:disabled{
+    opacity: .3;
+  }
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  &__icon{
+    height: 24px;
+    width: 24px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+  }
+  @include size('vk-button');
+  @include color('vk-button');
+  &.text{
+    padding: 0;
+    border-radius: 0;
+    background-color: transparent;
+    color: $primary;
+    & .vk-button__icon > svg{
+      fill: $primary;
+    }
+  }
+  &.outline{
+    background-color: inherit;
+    border: 1px solid $primary;
+    color: $primary;
+    & .vk-button__icon > svg{
+      fill: $primary;
+    }
+  }
+  &.rounded{
+    border-radius: 20px;
+  }
+  &.block{
+    width: 100%;
+  }
+}

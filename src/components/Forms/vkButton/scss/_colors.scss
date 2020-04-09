@@ -1,0 +1,28 @@
+$colors: "primary", "secondary";
+
+$white: #ffffff;
+$primary: #4986cc;
+$secondary-primary: #3f8ae0;
+$secondary: rgba(0,29,61,.05);
+
+$color-block: (
+  "primary": $primary,
+  "secondary": $secondary
+);
+
+$color-text: (
+  "primary": $white,
+  "secondary": $secondary-primary
+);
+
+@mixin color($class) {
+  @each $color in $colors {
+    &.#{$color} {
+      background-color: map-get($color-block, $color);
+      color: map-get($color-text, $color);
+      & .#{$class}__icon > svg{
+        fill: map-get($color-text, $color);
+      }
+    }
+  }
+}
