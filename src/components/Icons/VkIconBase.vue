@@ -1,15 +1,16 @@
 <template>
-  <svg xmlns="http://www.w3.org/2000/svg"
-       :width="width"
-       :height="height"
-       viewBox="0 0 18 18"
-       :aria-labelledby="iconName"
-       role="presentation"
+  <svg
+    xmlns="http://www.w3.org/2000/svg"
+    :width="width"
+    :height="height"
+    viewBox="0 0 24 24"
+    :aria-labelledby="iconName"
+    role="presentation"
   >
     <title
       :id="iconName"
       lang="en" />
-    <g fill="iconColor">
+    <g :fill="iconColor">
       <slot />
     </g>
   </svg>
@@ -25,11 +26,11 @@ export default {
     },
     width: {
       type: [Number, String],
-      default: 16
+      default: 24
     },
     height: {
       type: [Number, String],
-      default: 16
+      default: 24
     },
     iconColor: {
       type: String

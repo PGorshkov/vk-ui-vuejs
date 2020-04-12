@@ -1,0 +1,15 @@
+.vk-tooltip{
+  position: relative;
+  &__activator{
+    display: inline-block;
+    cursor: pointer;
+  }
+  &__content{
+    position: absolute;
+    top: 100%;
+    background-color: #4986cc;
+    color: #ffffff;
+    padding: 8px;
+    border-radius: 8px;
+  }
+}

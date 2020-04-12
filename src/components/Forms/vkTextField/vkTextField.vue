@@ -56,8 +56,7 @@ export default {
       default: 'default'
     },
     icon: {
-      type: String,
-      default: 'default'
+      type: String
     },
     detailsHide: {
       type: Boolean,

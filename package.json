@@ -6,7 +6,7 @@
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build",
     "sb": "start-storybook",
-    "build-sb": "build-storybook -c .storybook -o .out",
+    "build-sb": "build-storybook -c .storybook -o vk-ui-vuejs",
     "test:unit": "vue-cli-service test:unit",
     "lint": "vue-cli-service lint"
   },
